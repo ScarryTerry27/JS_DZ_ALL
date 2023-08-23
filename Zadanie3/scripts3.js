@@ -10,7 +10,11 @@ window.history.pushState({ record: "3" }, "page 3", "?page=3");
 arr_history.push(window.location.href);
 window.history.go(-3);
 
+let flag = true;
 function CheckHistory() {
+  if (!flag) {
+    return false;
+  }
   let child = document.createElement("ul");
   child.className = "collection";
   let str = "";
@@ -25,15 +29,18 @@ function CheckHistory() {
   console.log(child);
   let parent = document.getElementById("main");
   parent.append(child);
+  flag = false;
 }
 
 function HistoryBack() {
+  flag = true;
   let ul = document.querySelector("ul");
   ul.remove();
   window.history.back();
 }
 
 function HistoryForward() {
+  flag = true;
   let ul = document.querySelector("ul");
   ul.remove();
   window.history.forward();
