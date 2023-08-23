@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="row">
+        <div
+          class="col s10 offset-s2"
+          style="margin-bottom: 50px; margin-top: 50px"
+        >
+          <button class="btn" onclick="CheckHistory()">История</button>
+        </div>
+        <div class="col s10 offset-s2">
+          <button class="btn" onclick="HistoryBack()">
+            <i class="material-icons">keyboard_arrow_left</i>
+          </button>
+          <button class="btn" onclick="HistoryForward()">
+            <i class="material-icons">keyboard_arrow_right</i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts3.js"></script>
+  </body>
+</html>
